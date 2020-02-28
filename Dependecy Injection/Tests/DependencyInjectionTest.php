@@ -10,9 +10,9 @@ class DependencyInjectionTest extends TestCase
 {
     public function testDependencyInjection()
     {
-        $config = new DatabaseConfiguration('localhost', 3306, 'root', '1234');
+        $config = new DatabaseConfiguration('host', 'port', 'username', 'password');
         $connection = new DatabaseConnection($config);
 
-        $this->assertSame('root:@localhost:3306', $connection->getDsn());
+        $this->assertSame('username:password@host:port', $connection->getDsn());
     }
 }
