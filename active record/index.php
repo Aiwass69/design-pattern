@@ -2,7 +2,8 @@
 
 include 'Model/Person.php';
 
-$connection= new PDO("mysql:host=localhost;dbname=design_patterns;", 'root', '');
+//$connection= new PDO("mysql:host=localhost;dbname=design_patterns;", 'root', '');
+$connection= new PDO("mysql:host=localhost;dbname=dbname;", 'user', 'password');
 
 $query= 'SELECT * FROM  User';
 
