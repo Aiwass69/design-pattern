@@ -61,7 +61,7 @@ Es aquí donde aparece el decorator pattern, el cual nos va a permitir añadir c
  
  ![](http://radar.oreilly.com/wp-files/2/2014/12/invoker.png)
  
- #Dependecy Injection
+ # Dependecy Injection
   
   Este patrón implementa un sistema por el cual un objeto se encarga de proveer de las dependencias al resto de objetos (clientes) que así lo requieran.
   
