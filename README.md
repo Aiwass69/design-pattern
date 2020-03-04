@@ -11,11 +11,20 @@ Los patrones creacionales están basados en dos conceptos:
 1. Encapsular el conocimiento acerca de los tipos concretos que nuestro sistema utiliza. Estos patrones normalmente trabajarán con interfaces, por lo que la implementación concreta que utilicemos queda aislada.
 2. Ocultar cómo estas implementaciones concretas necesitan ser creadas y cómo se combinan entre sí.
 
-# Factory Method Pattern
+# Factory Pattern
 
 El factory pattern aborda el problema de crear objetos sin tener que especificar la clase exacta a la que han de pertenecer y sin tener que acceder directamente a la lógica de creación.
 
 Imaginad por ejemplo la conexión con una base de datos. Habitualmente, lo que nosotros necesitamos es un objeto que nos permita interactuar con la base de datos subyacente independientemente de que sea MySQL, SQL Server o SQLite. Aunque acabemos usando el objeto de conexión de una forma similar (todos dispondrán de los métodos query, insert, delete… ), la lógica de creación puede diferir bastante y es aquí donde entra este patrón de diseño, permitiéndonos obtener un objeto conexión dentro de una clase sin tener que bajar a los detalles de la instanciación de dicho objeto.
+
+existen tres tipos de factory, las cuales son:
+
+1. Simple Factory: Una implementación concreta de un Factory, es la implementación sencilla cuando quieres crear diferentes objetos que sabes tienen una relación en concreto con esa fabrica, por ejemplo una fabrica de validadores, que crea implementaciones concretas de algún validador.
+
+2. Factory Method: Se usa para separar diferentes Fabricas de Objetos que estan dentro de un mismo componente común, por ejemplo, un objeto que crea formularios, puede tener un fabrica que cree formularios desde un XML, o desde un array, o desde una BDD, y tienes todos los métodos dentro de la misma fabrica
+
+3. Abstract Factory: es un patrón mucho más complejo pero igual de útil, la idea es que las mismas fábricas de objetos sean interfaces, así como los productos que crean son interfaces, y es la misma aplicación la que decide a travez de inyección de dependencias que implementación de fabrica y producto crear, en la Wikipedia hay un muy buen ejemplo de botones.
+
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/43/W3sDesign_Factory_Method_Design_Pattern_UML.jpg)
 
