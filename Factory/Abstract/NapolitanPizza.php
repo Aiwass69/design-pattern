@@ -10,6 +10,6 @@ class NapolitanPizza extends Pizza
     }
 
     public function getHawaian($sauce, $bulkOfMass, $ingredient){
-        return "Napolitan with sauce". $sauce. "a bulk of edge". $bulkOfMass. "and". $ingredient;
+        return "CirclePizza with sauce". $sauce. "a bulk of edge". $bulkOfMass. "and". $ingredient;
     }
 }

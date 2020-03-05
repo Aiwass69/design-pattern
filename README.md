@@ -2,7 +2,7 @@
 
 Patrones de diseño en PHP y sus ejemplos
 
-#Patrones creacionales
+# Patrones creacionales
 
 Son los que facilitan la tarea de creación de nuevos objetos, de tal forma que el proceso de creación pueda ser desacoplado de la implementación del resto del sistema.
 
